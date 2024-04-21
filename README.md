@@ -4,6 +4,8 @@ https://www.youtube.com/watch?v=hURUMwdCWuI&t=5516s
 
 rails new ecommerce --css tailwind
 
+font awesome
+
 Stripe - checkout
 
 Devise - authentication
@@ -52,8 +54,29 @@ Depending on your application's configuration some manual setup may be required:
        
      * Not required *
 
-application.css.scss
+app/assets/stylesheets/application.css.scss
 application.tailwind.css
 @import 'font-awesome'
 home_controller.rb
-index.html.erb     
+app/views/home/index.html.erb   
+
+localhost:3000 is home
+
+rails g devise Admin
+rails db:migrate
+http://localhost:3000/admins/sign_in
+
+rails c
+Admin.create(email: "admin@example.com", password: "password")
+
+admin_controller.rb
+
+app/views/admin/index.html.erb
+
+http://localhost:3000/admin
+
+app/views/layouts/admin.html.erb
+
+bin/dev (to run the class updates in html)
+
+localhost:3000/admin
